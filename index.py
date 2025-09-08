@@ -4,7 +4,7 @@ import joblib
 
 # Load trained model
 
-model = joblib.load(r"D:\ML-Fraud-Detection\notebooks\fraud_detection.pkl")
+model = joblib.load(r"fraud_detection.pkl")
 
 # Define all expected columns (must match training time)
 ALL_COLUMNS = [
@@ -65,3 +65,4 @@ if st.button("Predict Fraud"):
         st.error(f"⚠️ Fraudulent Transaction Detected! (Probability: {probability:.2f})")
     else:
         st.success(f"✅ Legitimate Transaction (Fraud Probability: {probability:.2f})")
+
