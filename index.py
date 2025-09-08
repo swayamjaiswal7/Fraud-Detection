@@ -52,10 +52,6 @@ if st.button("Predict Fraud"):
     if col_name in input_data.columns:
         input_data.at[0, col_name] = 1
 
-    # Debug: Show final input
-    st.write("Processed Input Data:")
-    st.dataframe(input_data)
-
     # Prediction
     prediction = model.predict(input_data)[0]
     probability = model.predict_proba(input_data)[0][1]
@@ -65,4 +61,5 @@ if st.button("Predict Fraud"):
         st.error(f"⚠️ Fraudulent Transaction Detected! (Probability: {probability:.2f})")
     else:
         st.success(f"✅ Legitimate Transaction (Fraud Probability: {probability:.2f})")
+
 
