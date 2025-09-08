@@ -9,36 +9,11 @@ A machine learning web application built with Streamlit to detect fraudulent fin
 
 - Displays fraud probability and binary classification result.
 
-- Modular project structure with separate training and deployment scripts.
-
 - Reproducible ML pipeline with scikit-learn.
 
-ML-Fraud-Detection/
-│
-├── src/
-│   ├── app.py               # Streamlit app (frontend)
-│   ├── train.py             # Script to train and save model
-│   ├── pipeline.py          # ML pipeline (preprocessing + model)
-│   ├── utils.py             # Helper functions
-│
-├── notebooks/
-│   └── analysis-modeling.ipynb   # Exploratory analysis & experiments
-│
-├── datasets/
-│   └── sample.csv           # Example dataset (small sample)
-│
-├── models/
-│   └── fraud_detection.pkl  # Trained ML model
-│
-├── requirements.txt         # Python dependencies
-├── README.md                # Project documentation
-└── .gitignore               # Ignore venv, __pycache__, large data
-
-## Installation
-
 ### Clone Repo
-git clone https://github.com/your-username/ML-Fraud-Detection.git
-cd ML-Fraud-Detection
+git clone https://github.com/swayamjaiswal7/Fraud-Detection.git
+cd Fraud-Detection
 
 ### Create Virtual Environment
 python -m venv .venv
@@ -49,7 +24,7 @@ source .venv/bin/activate # Mac/Linux
 pip install -r requirements.txt
 
 ### Run App
-streamlit run src/app.py
+streamlit run index.py
 
 ### Usage
  ##### Enter Transaction Details
@@ -58,16 +33,20 @@ streamlit run src/app.py
  - New Balance (Sender)
  - Old Balance (Receiver)
  - New Balance (Receiver)
+ - Type
  
  ##### Click Predict
  
  ### App will display whether the Transaction is Fraud or Not
 
  # Model Used
+ 
  - Logistic Regression
  - Imbalanced Class Handling (SMOTE)
 
  ## Deployed on streamlit
 
  ## Demo Screenshot
- ![alt text](image.png)
+ <img width="786" height="860" alt="image" src="https://github.com/user-attachments/assets/163a5ef7-02c0-4313-bfaa-bd1394608a53" />
+
+
